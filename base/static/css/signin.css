@@ -1,0 +1,105 @@
+
+body{
+margin: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+padding-top: 50px;
+
+}
+
+.body_div{
+padding: 30px;
+border-top-left-radius: 30px;
+border-bottom-right-radius: 30px;
+background: rgba(245, 230, 99,.5);
+border: solid 5px #59CD90;
+box-shadow: 10px 10px 0px 0px rgba(89, 205, 144,.5);
+width:500px ;
+min-height: 250px;
+margin-top: 10px;
+
+}
+
+#signin_head{
+background-color: #59CD90 ;
+color: rgb(250 242 176) ;
+padding: 10px 20px;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: left;
+}
+
+input{
+	padding: 10px 20px;
+	border: solid 2px #59CD90;
+	border-radius: 20px 0px 20px 0px;
+	outline: none;
+	background-color: rgb(171 230 199);
+	color: white;
+	font-weight: bolder;
+	width: 170px;
+	font-size: 1em;
+}
+
+.labels{
+	color:#59CD90 ;
+	padding: 10px;
+	font-weight: bolder;
+	padding-bottom: 5px;
+
+}
+
+.div_sep{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.outer_sep{
+	display: flex;
+	flex-direction: row;
+	justify-content:space-between;
+	align-items: left;
+}
+
+#submit_button{
+	align-self: center;
+	margin-top: 20px;
+	width: 100px;
+	background-color: #59CD90;
+	box-shadow: 3px 3px 0px 0px rgb(171 230 199);
+}
+
+.errorlist{
+	list-style: none;
+	color: #EF3054;
+	font-weight: bolder;
+
+}
+
+@media screen and (max-width: 600px){
+	body{
+		padding-top:20px;
+			}
+	.outer_sep{
+	display: flex;
+	flex-direction: column;
+	justify-content:space-between;
+	align-items: center;
+	}
+
+	.body_div{
+
+	width: 250px;
+  	margin: 20px;
+  	box-shadow: 5px 5px 0px 0px rgba(89, 205, 144,.5);
+	}
+}

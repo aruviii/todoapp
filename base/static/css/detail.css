@@ -1,0 +1,99 @@
+#body_div{
+
+padding: 30px;
+border-top-left-radius: 30px;
+border-bottom-right-radius: 30px;
+background: rgba(245, 230, 99,.5);
+border: solid 5px #59CD90;
+box-shadow: 10px 10px 0px 0px rgba(89, 205, 144,.5);
+width:500px ;
+min-height: 250px;
+margin-top: 10px;
+
+}
+
+body{
+
+	padding-top: 70px;
+	display: flex ;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+
+}
+
+#head{
+
+	color: rgb(250 242 176) ;
+	background-color: #5bcd90;
+	padding: 10px 20px;
+
+}
+
+h3{
+
+	color: #59CD90;
+
+}
+
+table,td{
+
+	border-collapse: collapse;
+	font-weight: bolder;
+	border: solid #59CD90 2px ;
+	color: #59CD90;
+	font-size: 20px;
+
+}
+
+td{
+	padding: 20px;
+}
+
+table{
+	width:500px ;
+}
+
+#back_button{
+	margin: 20px;
+	padding: 5px 15px;
+	font-weight: bolder;
+	border: solid 2px #59CD90;
+	border-radius: 10px 0px 10px 0px;
+	text-decoration: none;
+	color: #59CD90;
+	position: relative;
+	left: 200px;
+}
+
+#back_button:hover{
+	box-shadow: 3px 3px 0px 0px rgb(171 230 199);
+}
+
+#back_button:visited{
+	color: #59CD90;
+}
+
+@media screen and (max-width: 600px){
+
+	body{
+
+	}
+
+	#body_div{
+		width: 270px;
+	}
+	table{
+		width: 250px;
+	}
+	td{
+	padding: 10px;
+	font-size: .8em;
+	}
+
+
+}
+
+.errorlist{
+	display: block;
+}

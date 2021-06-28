@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body{
+margin: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+padding-top: 50px;
+
+}
+
+.body_div{
+padding: 30px;
+margin-top: 30px;
+border-top-left-radius: 30px;
+border-bottom-right-radius: 30px;
+background: rgba(245, 230, 99,.5);
+border: solid 5px #59CD90;
+box-shadow: 10px 10px 0px 0px rgba(89, 205, 144,.5);
+width:500px ;
+
+}
+
+#todo_head{
+	background: #59CD90;
+	padding: 10px;
+	padding-right: 0px;
+	color: rgb(250 242 176);
+}
+#list_head{
+	background:rgb(250 242 176);
+	padding: 10px;
+	padding-left: 0px;
+	color:  #59CD90;
+
+}
+#heading{
+	color: red;
+	font-family: 'Merienda', cursive;
+}
+
+.inner_body_div{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.left_box{
+	width: 220px;
+	height: 180px;
+	padding: 20px;
+}
+
+.right_box{
+
+	width: 210px;
+	height: 180px;
+	padding: 20px;
+	border-left: solid 2px #59CD90;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.login_button{
+
+
+	padding: 10px 30px;
+	border:solid 2px #59CD90;
+	background-color: #59CD90;
+	box-shadow:3px 3px 0px 0px rgb(89 205 144 / 30%);
+	margin-bottom: 30px;
+	border-radius: 20px;
+	color: white;
+	text-decoration: none;
+	font-weight: bolder;
+	width: 50px;
+	text-align: center;
+
+}
+
+
+.login_button:hover{
+	color: white;
+}
+
+.signin_button{
+
+	padding: 10px 30px;
+	border:solid 2px #59CD90;
+	background-color: #59CD90;
+	box-shadow:3px 3px 0px 0px rgb(89 205 144 / 30%);
+	margin-bottom: 30px;
+	border-radius: 20px;
+	color: white;
+	text-decoration: none;
+	font-weight: bolder;
+	word-spacing: 50px;
+	width: 50px;
+
+}
+
+.quote{
+	color:#59CD90 ;
+}
+
+.recommend{
+	margin-top: 0px ;
+	color:#59CD90 ;
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    padding: 20px;
+  }
+
+  .body_div{
+
+  	width: 250px;
+  	margin: 20px;
+  	box-shadow: 5px 5px 0px 0px rgba(89, 205, 144,.5);
+
+
+  }
+
+  .inner_body_div{
+
+  display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+  }
+
+  .left_box{
+  	min-height: 180px ;
+  }
+
+  .right_box{
+
+	width: 210px;
+	height: 150px;
+	padding: 20px;
+	border-top: solid 2px #59CD90;
+	border-left: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+
+}
+
+}

@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+#todo_head{
+
+	background: #59CD90;
+	padding: 10px;
+	padding-right: 0px;
+	color: rgb(250 242 176);
+
+}
+
+#list_head{
+	background:rgb(250 242 176);
+	padding: 10px;
+	padding-left: 0px;
+	color:  #59CD90;
+}
+
+#heading{
+
+	font-family: 'Merienda', cursive;
+
+}
+
+.create_ul{
+
+	list-style: none;
+
+}
+
+body{
+
+	padding: 30px;
+	display: flex ;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 0px;
+	overflow-y: hidden;
+
+}
+
+#bommi{
+
+	background-color: greenyellow;
+
+}
+
+#body_div{
+
+padding: 30px;
+border-top-left-radius: 30px;
+border-bottom-right-radius: 30px;
+background: rgba(245, 230, 99,.5);
+border: solid 5px #59CD90;
+box-shadow: 10px 10px 0px 0px rgba(89, 205, 144,.5);
+width:500px ;
+min-height: 200px;
+margin-top: 10px;
+
+}
+
+#id_user{
+	width: 213px;
+	padding: 5px 5px;
+	background-color: rgb(89 205 144 / 50%);
+	border: solid 2px #59CD90;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	outline: none;
+}
+
+#id_description{
+	width: 400px;
+	padding: 5px 5px;
+	height: 100px;
+	vertical-align: bottom;
+	background-color: rgb(89 205 144 / 50%);
+	border-top-left-radius: 10px;
+	border: solid 2px #59CD90;
+	border-bottom-right-radius: 10px;
+	outline: none;
+
+}
+
+form p{
+	display: flex;
+	flex-direction :column;
+
+}
+
+form p:nth-child(5){
+	display: flex;
+	flex-direction :row;
+
+}
+
+#id_title{
+	background-color: rgb(89 205 144 / 50%);
+	padding: 5px 5px;
+	width: 200px;
+	background-color: rgb(89 205 144 / 50%);
+	border-top-left-radius: 10px;
+	border: solid 2px #59CD90;
+	border-bottom-right-radius: 10px;
+	outline: none;
+}
+
+label{
+
+	width:100px;
+	color: #59CD90;
+	margin: 5px;
+	font-weight: bolder;
+
+}
+
+label:nth-child(5){
+
+	width:100px;
+	color: #59CD90;
+	margin: 5px;
+
+}
+
+#submit_button{
+
+	background-color: #59CD90;
+	padding: 10px 20px;
+	color: rgb(245, 230, 99);
+	box-shadow: 3px 3px 0px 0px rgb(89 205 144 / 50%);
+	border-top-left-radius: 10px ;
+	border-bottom-right-radius: 10px ;
+	font-weight: bolder;
+	border: none;
+
+}
+
+#submit_button:hover{
+
+	cursor: pointer;
+
+}
+
+input,textarea,select,option{
+
+	color:white;
+	font-size: 15px;
+	font-weight: bolder;
+}
+
+.errorlist li {
+	color :#EF3054;
+	opacity: 80%;
+	list-style: none;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+.errorlist{
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+#back_button{
+	text-decoration: none;
+	margin: 20px;
+	padding: 8px 20px;
+	border: solid 2px #59CD90;
+	color: #59CD90 ;
+	font-weight: bolder;
+	border-radius: 15px 0px 15px 0px  ;
+	box-shadow: 3px 3px 0px 0px rgb(168 223 159);
+}
+
+#back_button{
+	color: #59CD90 ;
+}
+
+@media screen and (max-width:600px){
+
+	body{
+
+	}
+	#body_div{
+		width: 260px;
+		box-shadow: 5px 5px 0px 0px rgba(89, 205, 144,.5);
+	}
+	#id_description{
+		width: 230px;
+	}
+
+
+
+}

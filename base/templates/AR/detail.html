@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>detail</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+</head>
+<body>
+	<h1 id="head">
+		DETAILS
+	</h1>
+	<div id="body_div">
+		<table>
+			<tr><td>User</td><td>{{details.user}}</td></tr>
+			<tr><td>Task</td><td>{{details.title}}</td></tr>
+			<tr><td>Description</td><td>{{details.description}}</td></tr>
+			<tr><td>Status</td><td>{{details.is_completed}}</td></tr>
+			<tr><td>Date</td><td>{{details.created_at}}</td></tr>
+		</table>
+		<br>
+		<a id="back_button" href="{% url 'tasks' %}">back</a>
+
+
+
+	</div>
+</body>
+</html>

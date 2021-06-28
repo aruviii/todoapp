@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Signin</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/signin.css' %}">
+</head>
+<body onload="myFunction()">
+	<h1 id="signin_head">SignIn</h1>
+	<div class='body_div'>
+
+		<form id="id_form" method="POST">
+
+		{% csrf_token %}
+		<div class="outer_sep">
+		<div class="div_sep">
+			<label class="labels" for="id_username">userName</label>
+			{{form.username}}
+			<label class="labels" for="id_email">eMail</label>
+			{{form.email}}
+		</div>
+
+		<div class="div_sep">
+
+			<label class="labels" for="id_password1">passWord</label>
+			{{form.password1}}
+
+			<label class="labels" for="id_password2">confirm passWord</label>
+			{{form.password2}}
+
+		</div>
+	</div>
+
+
+
+
+		<input id='submit_button' value="Submit" type="submit" >
+
+		{{form.errors}}
+		<p style="color:#59CD90;font-weight: bolder;">have u registered already? <a href="{%  url 'login' %}" style="color:blue;">login</a></p>
+		</form>
+
+	</div>
+	<script type="text/javascript">
+		console.log('hi');
+		function formSubmit(){
+			var form = document.getElementById('id_form');
+			console.log('clicked');
+			form.submit();
+
+		}
+	</script>
+</body>
+</html>

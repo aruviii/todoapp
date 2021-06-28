@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Login</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+	<h1 class="login_heading">LOGIN</h1>
+
+	<div class='body_div'>
+
+		<form method='POST' class="form_">
+			{% csrf_token %}
+			<div class="inner_Sep">
+			<label for="id_username">userName</label>
+			{{form.username}}
+			</div>
+			<div class="inner_Sep">
+			<label for="id_password">passWord</label>
+			{{form.password}}
+			</div>
+			<input class='submit_button' type="submit" name="login" value="Login">
+			{{form.errors}}
+			<p style="color:#59CD90;font-weight: bolder;">haven't u registered? <a href="{%  url 'signin' %}" style="color:blue;">signin</a></p>
+		</form>
+
+	</div>
+	<script type="text/javascript">
+ 			var name  = document.getElementById("id_username").placeholder;
+ 			name = "username";
+ 			var pass  = document.getElementById("id_password").placeholder;
+ 			pass = "username";
+
+ 			var error = document.getElementsByTagName("li");
+ 			error[0].innerHTML = "Please enter a correct username and password. Note that both fields may be case-sensitive."
+
+
+
+
+
+	</script>
+</body>
+</html>

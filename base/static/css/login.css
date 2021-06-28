@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body{
+margin: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+padding-top: 50px;
+
+}
+
+.body_div{
+padding: 30px;
+margin-top: 30px;
+border-top-left-radius: 30px;
+border-bottom-right-radius: 30px;
+background: rgba(245, 230, 99,.5);
+border: solid 5px #59CD90;
+box-shadow: 10px 10px 0px 0px rgba(89, 205, 144,.5);
+width:500px ;
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+
+}
+
+.login_heading{
+	background-color: #59CD90;
+	padding: 20px 30px;
+	color: rgb(250 242 176);
+}
+
+.form_{
+height: inherit;
+display: flex;
+flex-direction: column;
+justify-content:flex-start;
+align-items: center;
+
+}
+
+
+
+#id_username,#id_password{
+
+	padding: 10px 20px;
+	margin: 10px 20px;
+	border: solid 2px #59CD90;
+	border-radius : 15px 0px 15px 0px ;
+	background-color: rgb(168 ,223 ,159) ;
+	outline: none;
+	font-weight: bolder;
+
+}
+
+.errorlist{
+	list-style: none;
+	align-self: left;
+}
+li:nth-child(1){
+	color:#EF3054 ;
+}
+.submit_button{
+	padding: 10px 20px;
+	margin: 10px 20px;
+	border: solid 2px #59CD90;
+	border-radius : 15px 0px 15px 0px ;
+	background-color: #59CD90 ;
+	outline: none;
+	color: white;
+	font-weight: bolder;
+	box-shadow: 3px 3px 0px 0px rgb(168 ,223 ,159) ;
+
+}
+.submit_button:hover{
+	cursor: pointer;
+}
+
+label{
+	color: #59CD90;
+	font-weight: bolder;
+}
+
+.inner_Sep{
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px ;
+}
+
+@media screen and (max-width: 600px){
+	body{
+
+	}
+	.body_div{
+	padding: 30px;
+	margin-top: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background: rgba(245, 230, 99,.5);
+	border: solid 5px #59CD90;
+	box-shadow: 5px 5px 0px 0px rgba(89, 205, 144,.5);
+	width:500px ;
+	display: flex;
+	flex-direction: column;
+	justify-content:center;
+	align-items: center;
+	width: 230px;
+	}
+
+}

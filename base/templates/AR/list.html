@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lists</title>
+
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/task.css' %}">
+</head>
+
+<body>
+
+	<h1 id="heading"><span id="both"><span id="todo_head">Todo</span><span id="list_head">List</span></span></h1>
+	<div id="body_div">
+	<div id='top_box'>
+		<a id="add_button" href="{% url 'create-task' %}"><b>Add Task</b></a>
+
+			<a id="logout_button" href="{% url 'logout' %}">logout</a>
+
+	</div>
+	<table id="list_table">
+
+	<tr >
+		<div >
+		<th id="head_row">Tasks</th><th>status</th><th>View</th><th>Update</th><th style="color:#EF3054;border-color:#EF3054;">Delete</th>
+		</div>
+	</tr>
+
+
+	{% for task in tasks %}
+
+		<tr>
+
+			<td class="title_col" id="id_title_{{task.id}}" ><b>{{task.title}}</b></td>
+			<td id="id_status_{{task.id}}" >{{task.is_completed}}</td>
+			<td class="view_col"><b><a class="a_tags" href="{{task.pk}}">view</b></td></a>
+			<td class="update_col"><b><a class="a_tags" href="update/{{task.pk}}">update</a></b></td>
+			<td ><b><a class="delete_a_tag" href="delete/{{task.pk}}" >delete</a></b></td>
+
+		</tr>
+	{% empty %}
+		<tr>
+			<td colspan="5"><h3>Not to add any task yet</h3></td>
+		</tr>
+
+
+	{% endfor %}
+
+	</table>
+
+	</div>
+	{{ task_list|json_script:"data" }}
+	<script type="text/javascript">
+		const value = JSON.parse(document.getElementById('data').textContent);
+		console.log(value);
+		value.map((x)=>{
+
+			var id_status_data = document.getElementById(`id_status_${x.id}`);
+			var id_title_data = document.getElementById(`id_title_${x.id}`);
+			id_status_data.innerHTML = x.is_completed == true ? "Completed":"Pending";
+			id_status_data.style.textDecoration =  x.is_completed == true ?'line-through': "none";
+			id_title_data.style.textDecoration =  x.is_completed == true ?'line-through': "none";
+			id_status_data.style.opacity = x.is_completed == true ?'.5': "none";
+			id_title_data.style.opacity = x.is_completed == true ?'.5': "none";
+
+
+
+		});
+	</script>
+
+
+</body>
+</html>
+
+<!-- <script type="text/javascript">
+		const value = JSON.parse(document.getElementById('data').textContent);
+		console.log(value);
+		value.map((x)=>{
+
+			var id_status_data = document.getElementById(`id_status_${x.title}`);
+			var id_title_data = document.getElementById(`id_title_${x.title}`);
+			id_status_data.innerHTML = x.is_completed == true ? "Completed":"Pending";
+			id_status_data.style.textDecoration =  x.is_completed == true ?'line-through': "none";
+			id_title_data.style.textDecoration =  x.is_completed == true ?'line-through': "none";
+			id_status_data.style.opacity = x.is_completed == true ?'.5': "none";
+			id_title_data.style.opacity = x.is_completed == true ?'.5': "none";
+			console.log(id_title_data);
+
+
+		});
+	</script> -->
